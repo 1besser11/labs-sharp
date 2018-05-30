@@ -34,7 +34,7 @@ namespace laba2
             {
                 series3[3] = series[2].ToReal() / new Real(0);
             }
-            catch (CustomException2 e)
+            catch (CustomDivideByZero e)
             {
                 Console.WriteLine(e.Message);
             }
@@ -61,58 +61,58 @@ namespace laba2
     }
 
 
-    class CustomException : InvalidCastException
+    class CustomInvalidCast : InvalidCastException
     {
-        public CustomException()
+        public CustomInvalidCast()
             : base() { }
 
-        public CustomException(string message)
+        public CustomInvalidCast(string message)
             : base(message) { }
 
-        public CustomException(string format, params object[] args)
+        public CustomInvalidCast(string format, params object[] args)
             : base(string.Format(format, args)) { }
 
-        public CustomException(string message, Exception innerException)
+        public CustomInvalidCast(string message, Exception innerException)
             : base(message, innerException) { }
 
-        public CustomException(string format, Exception innerException, params object[] args)
+        public CustomInvalidCast(string format, Exception innerException, params object[] args)
             : base(string.Format(format, args), innerException) { }
     }
 
-    class CustomException1 : ArrayTypeMismatchException
+    class CustomArrayTypeMismatch : ArrayTypeMismatchException
     {
-        public CustomException1()
+        public CustomArrayTypeMismatch()
             : base() { }
 
-        public CustomException1(string message)
+        public CustomArrayTypeMismatch(string message)
             : base(message) { }
 
-        public CustomException1(string format, params object[] args)
+        public CustomArrayTypeMismatch(string format, params object[] args)
             : base(string.Format(format, args)) { }
 
-        public CustomException1(string message, Exception innerException)
+        public CustomArrayTypeMismatch(string message, Exception innerException)
             : base(message, innerException) { }
 
-        public CustomException1(string format, Exception innerException, params object[] args)
+        public CustomArrayTypeMismatch(string format, Exception innerException, params object[] args)
             : base(string.Format(format, args), innerException) { }
     }
 
 
-    class CustomException2 : DivideByZeroException
+    class CustomDivideByZero : DivideByZeroException
     {
-        public CustomException2()
+        public CustomDivideByZero()
             : base() { }
 
-        public CustomException2(string message)
+        public CustomDivideByZero(string message)
             : base(message) { }
 
-        public CustomException2(string format, params object[] args)
+        public CustomDivideByZero(string format, params object[] args)
             : base(string.Format(format, args)) { }
 
-        public CustomException2(string message, Exception innerException)
+        public CustomDivideByZero(string message, Exception innerException)
             : base(message, innerException) { }
 
-        public CustomException2(string format, Exception innerException, params object[] args)
+        public CustomDivideByZero(string format, Exception innerException, params object[] args)
             : base(string.Format(format, args), innerException) { }
     }
 
@@ -228,7 +228,7 @@ namespace laba2
             if (DoubleEquals(other.Value, 0))
             {
                 Console.WriteLine("Divsion by zero");
-                throw new CustomException2();
+                throw new CustomDivideByZero();
             }
             return new Real(one.Value / other.Value);
         }
@@ -299,7 +299,7 @@ namespace laba2
             if (other.Value == 0)
             {
                 Console.WriteLine("Divsion by zero");
-                throw new CustomException2();
+                throw new CustomDivideByZero();
             }
             return new Integer(one.Value / other.Value);
         }
@@ -361,7 +361,7 @@ namespace laba2
         {
             
                 if (other == null)
-                    throw new CustomException();
+                    throw new CustomInvalidCast();
                 return Value.CompareTo(other.Value);
            
         }

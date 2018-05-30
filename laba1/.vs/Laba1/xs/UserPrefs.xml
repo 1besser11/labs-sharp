@@ -1,7 +1,8 @@
-﻿<Properties StartupConfiguration="{AEDE0C0D-2A31-4A95-9876-E38F790A6F64}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="laba2/EmptyClass.cs">
+﻿<Properties StartupConfiguration="{8D1D0C8E-085C-45F7-B36A-06A9F6C44689}|Default">
+  <MonoDevelop.Ide.ItemProperties.laba1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="nnn/EmptyClass.cs">
     <Files>
-      <File FileName="laba2/EmptyClass.cs" Line="64" Column="19" />
+      <File FileName="nnn/EmptyClass.cs" Line="4" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
@@ -10,5 +11,4 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.laba2 PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
 </Properties>

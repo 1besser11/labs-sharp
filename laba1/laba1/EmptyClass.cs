@@ -1,7 +1,7 @@
 ﻿using System;
-namespace nnn
+namespace Laba1
 {
-    class HelloWorld
+    class Laba1
     {
         static bool calcAngle(int x1, int y1, int x2, int y2, int x3, int y3)
         {
@@ -9,7 +9,6 @@ namespace nnn
             double degrees = angle * (180 / Math.PI);
             double angle1 = Math.Atan2(y3 - y2, x3 - x2);
             double degrees1 = angle1 * (180 / Math.PI);
-            Console.WriteLine(degrees - degrees1);
             int sub = Convert.ToInt32(degrees - degrees1);
             if (sub == 0 || sub == 180 || sub == -180)
             {
@@ -34,21 +33,25 @@ namespace nnn
             int[,] matrix;
             int size;
             int chosen_path;
+            Console.WriteLine("Select mode:\n default - for default matrix and coordinates\n input - in order to input personal data \n rand - for random matrix");
             String mode = Console.ReadLine();
             switch (mode)
             {
                 case "rand":
+                    Console.WriteLine("Enter the size");
                     size = GetSize();
                     if (size == -1)
+                    {
+                        Console.WriteLine("Size is incorrect");
                         return;
+                    }
                     c = new int[size];
                     path = new int[size];
                     x = GenerateRandomCoordinates(size, 10);
                     y = GenerateRandomCoordinates(size, 10);
                     chosen_path = GenerateRandomPath(size);
-                    if (chosen_path == -1)
-                        return;
-                    matrix = GenerateRandom(size);
+
+                    matrix = GenerateRandomMatrix(size);
 
                     break;
 
@@ -56,19 +59,27 @@ namespace nnn
                 case "input":
                     x = readCoordinates("x");
                     y = readCoordinates("y");
+                    size = x.GetLength(0);
                     if (x.GetLength(0)==y.GetLength(0))
                     {
-                        matrix = readMatrix(x.GetLength(0));
-                        c = new int[x.GetLength(0)];
-                        path = new int[x.GetLength(0)];
+                        matrix = readMatrix(size);
+                        c = new int[size];
+                        path = new int[size];
                         chosen_path = GetChosenPath();
+                        if (chosen_path == -1)
+                        {
+                            Console.WriteLine("Path is incorrect");
+                            return;
+                        }
                     }
                     else{
+                        Console.WriteLine("Size of coordinates is incorrect");
                         return;
                     }
                     break;
 
                 case "default":
+                    size = 5;
                     x = new int[] { 0, 0, 1, 1, 2 };
                     y = new int[] { 0, 1, 1, 0, 0 };
                     c = new int[5];
@@ -94,27 +105,36 @@ namespace nnn
             }
 
 
-            int[,] z = GenerateRandom(5);//readMatrix();
+            Console.WriteLine("The chosen mattrix is");
             PrintMatrix(matrix);
-            if(!checkIfMatrixCorrect(z))
+            Console.WriteLine("Coordinates are");
+            PrintCoordinates(x, y);
+            if(!checkIfMatrixCorrect(matrix))
                 return;
-            int n = 5;
+            
 
-            for (int j = 0; j < n; j++) c[j] = -1;
+            for (int j = 0; j < size; j++) c[j] = -1;
             path[0] = v0;
             c[v0] = 0;
-            if (gamilton(1, n, path, matrix, c, v0, x, y, chosen_path) == 1||path[path.GetLength(0)-1]!=-1) { Console.WriteLine("oKAY"); }
-            else { Console.WriteLine("Нет решений\n"); }
-            /* My first program in C# */
+            if (gamilton(1, size, path, matrix, c, v0, x, y, chosen_path) == 1||path[path.GetLength(0)-1]!=-1) { 
+                Console.WriteLine("Path exists");
+                Console.WriteLine("The path is");
+                for (int i = 0; i < path.GetLength(0); i++)
+                    Console.Write(path[i] + "->");
+            }
+            else { Console.WriteLine("No path\n"); }
 
-            for (int i = 0; i < path.GetLength(0); i++)
-                Console.Write(path[i] + "->");
-            Console.WriteLine();
-            for (int i = 0; i < path.GetLength(0); i++)
-                Console.Write(c[i] + "->");
+            
 
         }
 
+        static void PrintCoordinates (int [] x, int [] y)
+        {
+            for (int i = 0; i < x.GetLength(0); i ++)
+            {
+                Console.Write($"Point with number {i + 1} has coordinates ({x[i]}, {y[i]})\n");
+            }
+        }
 
         static int[] getNumOfWays(int[,] a)
         {
@@ -282,7 +302,7 @@ namespace nnn
 
         }
 
-        static int[,] GenerateRandom(int size)
+        static int[,] GenerateRandomMatrix(int size)
         {
             int[,] matrics = new int[size, size];
             Random rnd = new Random();
