@@ -1,0 +1,5 @@
+/home/nikita/Projects/nnn/nnn/bin/Debug/nnn.exe
+/home/nikita/Projects/nnn/nnn/bin/Debug/nnn.pdb
+/home/nikita/Projects/nnn/nnn/obj/x86/Debug/nnn.csproj.CoreCompileInputs.cache
+/home/nikita/Projects/nnn/nnn/obj/x86/Debug/nnn.exe
+/home/nikita/Projects/nnn/nnn/obj/x86/Debug/nnn.pdb
