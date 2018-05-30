@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{8D1D0C8E-085C-45F7-B36A-06A9F6C44689}|Default">
   <MonoDevelop.Ide.ItemProperties.laba1 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="nnn/EmptyClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="laba1/EmptyClass.cs">
     <Files>
-      <File FileName="nnn/EmptyClass.cs" Line="4" Column="16" />
+      <File FileName="laba1/EmptyClass.cs" Line="386" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />

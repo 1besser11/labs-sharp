@@ -3,3 +3,8 @@
 /home/nikita/Projects/laba2/laba2/obj/x86/Debug/laba2.csproj.CoreCompileInputs.cache
 /home/nikita/Projects/laba2/laba2/obj/x86/Debug/laba2.exe
 /home/nikita/Projects/laba2/laba2/obj/x86/Debug/laba2.pdb
+/home/nikita/Desktop/c-sharp/labs-sharp/laba2/laba2/bin/Debug/laba2.exe
+/home/nikita/Desktop/c-sharp/labs-sharp/laba2/laba2/bin/Debug/laba2.pdb
+/home/nikita/Desktop/c-sharp/labs-sharp/laba2/laba2/obj/x86/Debug/laba2.csproj.CoreCompileInputs.cache
+/home/nikita/Desktop/c-sharp/labs-sharp/laba2/laba2/obj/x86/Debug/laba2.exe
+/home/nikita/Desktop/c-sharp/labs-sharp/laba2/laba2/obj/x86/Debug/laba2.pdb

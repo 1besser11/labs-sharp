@@ -4,3 +4,9 @@
 /home/nikita/Desktop/c-sharp/labs-sharp/nnn/nnn/obj/x86/Debug/laba1.csproj.CoreCompileInputs.cache
 /home/nikita/Desktop/c-sharp/labs-sharp/nnn/nnn/obj/x86/Debug/nnn.exe
 /home/nikita/Desktop/c-sharp/labs-sharp/nnn/nnn/obj/x86/Debug/nnn.pdb
+/home/nikita/Desktop/c-sharp/labs-sharp/laba1/laba1/bin/Debug/nnn.exe
+/home/nikita/Desktop/c-sharp/labs-sharp/laba1/laba1/bin/Debug/nnn.pdb
+/home/nikita/Desktop/c-sharp/labs-sharp/laba1/laba1/obj/x86/Debug/laba1.csprojResolveAssemblyReference.cache
+/home/nikita/Desktop/c-sharp/labs-sharp/laba1/laba1/obj/x86/Debug/laba1.csproj.CoreCompileInputs.cache
+/home/nikita/Desktop/c-sharp/labs-sharp/laba1/laba1/obj/x86/Debug/nnn.exe
+/home/nikita/Desktop/c-sharp/labs-sharp/laba1/laba1/obj/x86/Debug/nnn.pdb
