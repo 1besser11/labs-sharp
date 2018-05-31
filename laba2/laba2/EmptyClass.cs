@@ -253,7 +253,7 @@ namespace laba2
         }
         public override int GetHashCode()
         {
-            return Convert.ToInt32(this.Value);
+            return Convert.ToInt32(this.Value * 10000);
         }
 
         public static bool operator ==(Real one, Real two)
@@ -327,7 +327,7 @@ namespace laba2
         {
             try
             {
-                return Convert.ToInt32(this.Value * 10000);
+                return Convert.ToInt32(this.Value);
             }
             catch (Exception e)
             {
